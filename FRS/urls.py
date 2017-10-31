@@ -1,3 +1,6 @@
+from rest_framework.documentation import include_docs_urls
+from django.conf.urls import url, include
+
 """FRS URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,4 +21,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    url(r'^foodRecipeSys/', include('FoodRecipeSystem.urls', namespace='foodRecipeSys')),
 ]
